@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../page/home/home.component.css">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <div class="container_header">
+        <div class="logo">
+            <a href="#"><img src="../../../assets/images/logobecket.png" alt=""></a>
+        </div>
+
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Laboratorio</a></li>
+                    <li><a href="#">javascript</a></li>
+                </ul>
+            </nav>
+             </div>
+        </div>
+
+</header>
+<main>
+    <div id="inicio" class="container_cover div_offset">
+        <!-- Contenido de la sección de inicio -->
+    </div>
+    
+    <div id="laboratorio" class="container_trust container_card-primary">
+        <!-- Contenido de la sección de laboratorio -->
+    </div>
+    
+    <div id="javascript" class="container_about div_offset">
+        <!-- Contenido de la sección de JavaScript -->
+    </div>
+    <div class="container__cover div__offset">
+        <div class="cover">
+            <section class="text__cover">   
+                <h1>Becket Ramiro Menchaca Velasquez</h1>
+                <p>Examen Primer Parcial</p>
+                <a href="#"class="cover1">Empezar</a>                    
+            </section>
+            <section class="image__cover">
+                <img src="../../../assets/images/becketprimerparcial.png" alt="">
+            </section>
+        </div>
+    </div>
+    
+    <div class="container__trust container__card-primary">
+        <div class="trust card__primary">
+            <div class="text__trust text__card-primary">
+                <p>PRESENTACION DE LABORATORIOS</p>
+                <h1>Laboratorios de JavaScript</h1>
+            </div>
+            <div class="container__trut container__box-cardPrimary">
+                <div class="card__trust box__card-primary">
+                    <h2>2.0.15 Laboratorio "Variables</h2>
+                    <div class="cuadrado">
+    <textarea cols="100" rows="30">
+    var nom1 = "Maxwell Wright";
+    var nom2 = "Raja Villarreal";
+    var nom3 = "Helen Richards";
+    let num1 = " (0191) 719 6495";
+    let num2 = " 0866 398 2895";
+    let num3 = " 0800 1111";
+    const corr1 = " Curabitur.egestas.nunc@nonummyac.co.uk";
+    const corr2 = " posuere.vulputate@sed.com";
+    const corr3 = "	libero@convallis.edu";
+    
+    function imprimir()
+    {
+    console.log(nom1 + num1 + corr1)
+    console.log(nom2 + num2 + corr2)
+    console.log(nom3 + num3 + corr3)
+    }
+    
+    imprimir();
+                        
+    </textarea>
+    </div>
+            </div>
+            <div class="card" id="dos" data-aos="fade-up"
+            data-aos-duration="2000">
+                <h1>LABORATORIO 2</h1>
+                    <div class="cuadrado">
+    <textarea cols="100" rows="30">
+    let contacts = [{
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+    }, {
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+    }, {
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+    }];
+                      
+    let newContact = { name: "Maisie Haley", phone: "0913 531 3030", email: "risus.Quisque@urna.ca." }; 
+    contacts.push(newContact); 
+    /*console.log(contacts.length);*/ 
+    const num= contacts.length;
+    console.log(contacts[0].name);  
+    console.log(contacts[num].name);
+    </textarea>   
+    </div>
+            </div>
+    
+            <div class="card" id="tres" data-aos="fade-up"
+            data-aos-duration="2000">
+                <h1>LABORATORIO 3</h1>
+                <div class="cuadrado">
+    <textarea cols="100" rows="30">
+    let contacts = [{
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+    }, {
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+    }, {
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+    }];
+                            
+    // write your code here
+                        
+    let names = window.prompt("Cual es tu nombre?");
+    names = names ? names : "Deleting Data";
+    let phone = prompt("Cual es tu numero telefonico?");
+    phone = phone ? phone : "Deleting Data";
+    let email = prompt("Cual es tu correo?");
+    let newContacts = {name:names, phone:phone, email:email}
+    let decision = window.confirm("Esta bien?");
+    contacts.push(newContacts);
+    console.log(decision);
+    let remove = confirm("Remover el registro?");
+    let message = remove ? "Deleting Data" : "Cancelled"
+    contacts.pop(newContacts);
+                            
+    let last = contacts.length - 1;
+                            
+    console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+    console.log(`${contacts[last].name} / ${contacts[last].phone} / ${contacts[last].email}`);
+    </textarea>
+    </div>
+            </div>
+    
+            <div class="card" id="cuatro" data-aos="fade-up"
+            data-aos-duration="2000">
+                <h1>LABORATORIO 4</h1>
+                <div class="cuadrado">
+    <textarea cols="100" rows="30">
+    let contacts = [{
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac. co.uk"
+    }, {
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+    }, {
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+    }];
+                                           
+    let opcion = prompt("Elige opción: Mostrar primer contacto (primero), Mostrar último contacto (ultimo), Agregar un nuevo contacto (nuevo)");
+                        
+    switch (opcion) {
+        case "primero":
+            console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+        break;
+        case "ultimo":
+            let last = contacts.length - 1;
+             console.log(`${contacts[last].name} / ${contacts[last].phone} / ${contacts[last].email}`);
+        break;
+        case "nuevo":
+            let nombre = prompt("Ingrese el nombre del nuevo contacto:");
+            nombre = nombre ? nombre:"null"
+            let phone = prompt("Ingrese el teléfono del nuevo contacto:");
+            phone = phone ? phone:"null"
+            let correo = prompt("Ingrese el correo del nuevo contacto:");
+            correo = correo ? phone:"null"
+                                
+            if(nombre !== "null" && phone !== "null" && correo !== "null"){
+                let newContacts = {name:nombre, phone:phone, email:correo}
+                contacts.push(newContacts);
+                break;
+                }
+            console.log("Opción inválida");
+                                    
+        break;
+                            
+            }
+                        
+    let lasta = contacts.length - 1;
+    console.log(`${contacts[lasta].name} / ${contacts[lasta].phone} / ${contacts[lasta].email}`);
+                    </textarea>
+                </div>
+            </div>
+    
+            <div class="card" id="cinco" data-aos="fade-up"
+            data-aos-duration="2000">
+                <h1>LABORATORIO 5</h1>
+                <div class="cuadrado">
+    <textarea cols="100" rows="30">
+    let contacts = [{
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+    }, {
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+    }, {
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+    }];
+    
+    let opcion = "";
+    while (opcion !== "salir") {
+    opcion = prompt("que quieres hacer? (primero, ultimo, todo, new, salir)");
+    
+    switch (opcion) {
+    case "primero":
+        console.log(contacts[0]);
+        break;
+    case "ultimo":
+        console.log(contacts[contacts.length - 1]);
+        break;
+    case "todo":
+        for (let i = 0; i < contacts.length; i++) {
+                console.log(`${contacts[i].name} / ${contacts[i].phone} / ${contacts[i].email}`);
+            }
+            win=true;
+        break;
+    case "nuevo":
+        let newContact= {
+        name: prompt("Inserte nombre:"),
+        phone: prompt("Inserte numero:"),
+        email: prompt("Inserte email:")
+        };
+        contacts.push(newContact);
+        console.log("Nuevo contacto aniadido");
+        break;
+    case "salir":
+        console.log("Saliendo del programa");
+        break;
+    default:
+        console.log("Invalido. Intente de vuevo");
+        break;
+    }
+    }
+    </textarea>
+    </div>
+            </div>
+    
+            <div class="card" id="seis" data-aos="fade-up"
+            data-aos-duration="2000">
+                <h1>LABORATORIO 6</h1>
+                <div class="cuadrado">
+    <textarea cols="100" rows="30" >
+    let contacts = [{
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+    }, {
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+    }, {
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+    }];
+    
+    let showContact = function(contacts, index) {
+    if (contacts instanceof Array && index >= 0 && index < contacts.length) {
+    let contact = contacts[index];
+    console.log(`${contact.name} / ${contact.phone} / ${contact.email}`);
+    } else {
+    console.log("Indice o contactos no validos");
+    }
+    };
+    
+    let showAllContacts = function(contacts) {
+    if (contacts instanceof Array) {
+    for (let contact of contacts) {
+        console.log(`${contact.name} / ${contact.phone} / ${contact.email}`);
+    }
+    }
+    };
+    
+    let addNewContact = function(contacts, name, phone, email) {
+    if (contacts instanceof Array && name && phone && email) {
+    contacts.push({
+    name: name,
+    phone: phone,
+    email: email
+    });
+    console.log("Nuevo contacto agregado correctamente");
+    } else {
+    console.log("Contacto o datos de contacto invalidos");
+    }
+    };
+    
+    showContact(contacts, 0); 
+    showAllContacts(contacts); 
+    
+    addNewContact(contacts, "John Doe", "123-456-7890", "john.doe@example.com"); 
+    
+    showAllContacts(contacts);
+    </textarea>
+    </div>
+            </div>
+            <div class="card" id="siete" data-aos="fade-up"
+    data-aos-duration="2000">
+                <h1>LABORATORIO 7</h1>
+                <div class="cuadrado">
+    <textarea cols="100" rows="30">
+    let contacts = [
+    {
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+    },
+    {
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+    },
+    {
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+    }
+    ];
+    
+    let showContact = function(contacts, i) {
+    if (contacts instanceof Array && contacts[i]) {
+        console.log(`${contacts[i].name} / ${contacts[i].phone} / ${contacts[i].email}`);
+    }
+    }
+    
+    let showAllContacts = function(contacts) {
+    if (contacts instanceof Array) {
+        for (contact of contacts) {
+            console.log(`${contact.name} / ${contact.phone} / ${contact.email}`);
+        }
+    }
+    }
+    letaddNewContact = function (contacts, name, phone, email) {
+    if (contacts instanceof Array && name && phone && email) {
+        contacts.push({
+            name: name,
+            phone: phone,
+            email: email
+        });
+    }
+    }
+    let sortContacts = function (contacts, sortField) {
+    if (contacts instanceof Array && sortField) {
+        contacts.sort(function (a, b) {
+            if (a[sortField] > b[sortField]) {
+                return 1;
+            } else if (a[sortField] < b[sortField]) {
+                return -1;
+            } else {
+                return 0;
+            }
+        });
+    }
+    }
+    let runProgram = function () {
+    let option = prompt("Introducir opcion (1. Mostrar un contacto, 2. Mostrar todos los contactos, 3. Agregar nuevo contacto, 4. Ordenar contactos):");
+    
+    switch (option) {
+        case "1":
+            let index = parseInt(prompt("Introduce el indice del contacto que desea mostrar:"));
+            showContact(contacts, index);
+            break;
+        case "2":
+            showAllContacts(contacts);
+            break;
+        case "3":
+            let name = prompt("Ingrese nombre del nuevo contacto:");
+            let phone = prompt("Ingrese el número de teléfono del nuevo contacto:");
+            let email = prompt("Ingrese el email del nuevo contacto:");
+            addNewContact(contacts, name, phone, email);
+            break;
+        case "4":
+            let sortOption = prompt("Introduzca la opcion de ordenacion (1. Ordenar por nombre, 2. Ordenar por numero de telefono, 3. Ordenar por email):");
+            let sortField;
+    
+        switch (sortOption) {
+        case "1":
+            sortField = "name";
+            break;
+        case "2":
+            sortField = "phone";
+            break;
+        case "3":
+            sortField = "email";
+            break;
+        default:
+            console.log("Ivalidar opcion");
+            break;
+            }
+    
+            sortContacts(contacts, sortField);
+            break;
+        default:
+            console.log("Invalidar opcion");
+            break;
+    }
+    };   
+    
+    runProgram();
+    </textarea>
+    </div>
+            </div>
+        </div>   
+    <div class="container__about div__offset">
+        <div class="about">
+            <div class="text__about">
+                <h1>Aprendamos JavaScript</h1>
+                <p>JavaScript es un lenguaje de programación que los desarrolladores utilizan para hacer páginas web interactivas. 
+                    Desde actualizar fuentes de redes sociales a mostrar animaciones y mapas interactivos, 
+                    las funciones de JavaScript pueden mejorar la experiencia del usuario de un sitio web.</p>
+                    <a href="#" class="btn__text-about cover1">Saber mas...</a>
+            </div>   
+            <div class="image__about">
+                <img src="../../../assets/images/tareasprimerparcial.jpg" alt="">
+            </div>           
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Becket Ramiro Menchaca Velasquez - Todos los derechos reservados</p>
+    </div>
+</footer>
