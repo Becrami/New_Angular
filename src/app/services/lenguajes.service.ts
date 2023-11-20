@@ -11,8 +11,13 @@ export class LenguajesService {
 
   constructor(private http: HttpClient) { }
 
-  getlenguajes(): Observable<any> 
+  getListlanguages(): Observable<any> 
   {
     return this.http.get(this.url)
+  }
+
+  postlanguages(body:any): Observable<any>
+  {
+    return this.http.post(this.url, body) 
   }
 }
