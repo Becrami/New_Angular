@@ -39,7 +39,37 @@
             </section>
         </div>
     </div>
-    
+    <div class="tables-container">
+        <table class="user-table">
+            <tr>
+                <th>Nro</th>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Usuario</th>
+                <th>Correo</th>
+            </tr>
+            <tr *ngFor="let user of dataUsers; index as i">
+                <td>{{ (i + 1 ) }}</td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </table>
+        <br>
+        <table class="languages-table">
+            <tr>
+                <th>Nro</th>
+                <th>Abrev</th>
+                <th>Nombre</th>
+            </tr>
+            <tr *ngFor="let item of dataLanguajes; index as i">
+                <td>{{ (i + 1 ) }}</td>
+                <td>{{ item.languages.abrev }}</td>
+                <td>{{ item.languages.name }}</td>
+            </tr>
+        </table>
+    </div>
     <div class="container__trust container__card-primary">
         <div class="trust card__primary">
             <div class="text__trust text__card-primary">
