@@ -39,7 +39,7 @@
             </section>
         </div>
     </div>
-    <div class="tables-container">
+<!--   <div class="tables-container">
         <table class="user-table">
             <tr>
                 <th>Nro</th>
@@ -69,17 +69,48 @@
                 <td>{{ item.languages.name }}</td>
             </tr>
         </table>
+    </div> -->
+    <div class="form-label-input"> 
+        <form>
+            <label for="name">Nombres</label><br>
+            <input type="text" [(ngModel)]="name" [ngModelOptions]="{ standalone: true}"><br>
+            <label for="abrev">Abrev</label><br>
+            <input type="text" [(ngModel)]="abrev" [ngModelOptions]="{ standalone: true}"><br> 
+            <label for="creator">Creador</label><br>
+            <input type="text" [(ngModel)]="creator" [ngModelOptions]="{ standalone: true}"><br>
+            <label for="year">Año</label><br>
+            <input type="text" [(ngModel)]="year" [ngModelOptions]="{ standalone: true}"><br>
+
+            <input type="button" value="Enviar" (click)="save()">
+            <input type="button" value="Actualizar" (click)="update()">
+       </form>
     </div>
     <div>
-        <form>
-            <label>Nombres</label><br>
-            <input type="text" [ngModel]="name" [ngModelOptions]="{ standalone: true}"><br>
-            {{name}}
-            <label>Abrev</label><br>
-            <input type="text" [ngModel]="abrev" [ngModelOptions]="{ standalone: true}"><br>
-            {{abrev}} 
-            <input type="button" value="Enviar" (click)="save()">
-        </form>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nro</th> 
+                    <th>Nombre</th>
+                    <th>Abrev</th>
+                    <th>Creador</th>
+                    <th>Año</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of dataSource; index as nro">
+                    <th>{{nro + 1}}</th>
+                    <th>{{row.name}}</th>
+                    <th>{{row.abrev}}</th>
+                    <td>{{row.creator}}</td>
+                    <td>{{row.year}}</td> 
+                    <th>
+                        <button (click)="actualizar(row.id)">Editar</button>
+                        <button (click)="borrar(row.id)">Eliminar</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="container__trust container__card-primary">
         <div class="trust card__primary">
