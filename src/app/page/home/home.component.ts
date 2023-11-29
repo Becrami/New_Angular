@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
     this.editRow.creator = this.creator
   
     // Llama a tu servicio para actualizar los datos en la base de datos
-    this.language.updateLanguage(this.editRow.id, { name: this.name, abrev: this.abrev, country: this.year, creator: this.creator })
+    this.language.updateLanguage(this.editRow.id, { name: this.name, abrev: this.abrev, year: this.year, creator: this.creator })
       .subscribe((data) => {
         if (data != null) {
           this.editingMode = false; // Desactiva el modo de edición
