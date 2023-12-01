@@ -7,11 +7,14 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './page/home/home.component';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app'
+
 import { RegisterComponent } from './page/register/register.component';
 import { LoginComponent } from './page/login/login.component';
+import { LabsComponent } from './page/labs/labs.component';
+import { HeaderComponent } from './commons/header/header.component';
 
 const config ={
   apiKey: "AIzaSyDTNDTsBJI68ih3zGOWtXF2HpLknSJbpwA",
@@ -29,14 +32,15 @@ const config ={
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    LabsComponent,
+    HeaderComponent
     
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(config),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
+    provideFirebaseApp(()=>initializeApp(config)),
+    provideAuth(()=> getAuth()),
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

@@ -26,6 +26,11 @@ body {
     object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor sin distorsión */
   }
   
+  h1 {
+    color: #333;
+    text-align: center; /* Alinea el texto al centro */
+  }
+  
   form {
     background-color: #fff;
     padding: 20px;
@@ -38,26 +43,7 @@ body {
     margin: auto;
     margin-top: 130px;
   }
-  
-  h1, h2 {
-    color: #333;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
+
   button {
     background-color: #9e4caf;
     color: #fff;
@@ -65,19 +51,9 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 5px
   }
-  
   button:hover {
-    background-color: #9e4caf;
+    background-color: #45a049;
   }
-  
-  button.google {
-    background-color: #4285f4;
-  }
-  
-  button.google:hover {
-    background-color: #2d74da;
-  }
-  
   

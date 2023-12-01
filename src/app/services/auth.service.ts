@@ -1,31 +1,45 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Router } from '@angular/router';
+import {
+  Auth,
+  createUserWithEmailAndPassword,
+  getAuth,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  sendEmailVerification,
+  User
+} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private auth: AngularFireAuth, private router: Router){}
+  constructor(private auth: Auth){}
+
+  getuser(){
+    return  this.auth.currentUser;
+  }
 
   register(email:string, pass:string)
   {
-    this.auth.createUserWithEmailAndPassword(email, pass).then((res)=>{
-      console.log(res)
-      this.router.navigate(['/login'])
-    })
+    return createUserWithEmailAndPassword(this.auth, email, pass);
   }
 
   loginwithcredentials(user:string, pass:string){
-    this.auth.signInWithEmailAndPassword(user, pass).then((res)=>{
-      console.log(res)
-    })
+    return signInWithEmailAndPassword(this.auth, user, pass)
   }
 
-  async logout(){
-    await this.auth.signOut();
-    this.router.navigate(['/']);
+  loginwitgoogle()
+  {
+    return signInWithPopup(this.auth, new GoogleAuthProvider());
+  }
+
+  logout(){
+    return signOut(this.auth);
   }
 
 }

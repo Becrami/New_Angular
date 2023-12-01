@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   editingMode: boolean = false;
   year: string = "";
   creator: string = "";
-
+ 
 
 
   constructor(private usersServices: UsuariosService, private lenguajesServices: LenguajesService, private language: LenguajesService){}

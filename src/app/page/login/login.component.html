@@ -1,9 +1,14 @@
-<p>login works!</p>
+<app-header></app-header>
 <form>
-    <h1>Login</h1>
+    <h1>INICIO DE SESION</h1>
+    <h2>Login</h2>
     <label>email</label>
     <input type="text" [(ngModel)]="email" name="email">
     <label>pass</label>
     <input type="password" [(ngModel)]="pass" name="pass">
-    <button (click)="login()">Entrar</button>
+    <button (click)="login()">Entrar</button><br>
+    <button (click)="loginGoogle()">Login With Google</button>
 </form>
+<section class="image__cover">
+    <img src="../../../assets/images/login2_becket.jpg" alt="">
+</section>
