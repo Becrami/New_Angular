@@ -11,6 +11,8 @@ export class RegisterComponent {
 
   email:string ="";
   pass:string ="";
+  nombre:string="";
+  apellidos:string="";
 
   constructor(private authService:AuthService, private router:Router){}
 
@@ -19,7 +21,7 @@ export class RegisterComponent {
       this.router.navigate(["/"])
     }).catch(error=>{
       console.log(error)
-    })
+    }
+    )
   }
-
 }

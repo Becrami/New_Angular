@@ -1,0 +1,12 @@
+<app-header></app-header>
+<form>
+<h1>Mi Perfil</h1>
+<label>Actualizar Nombre</label>
+<input type="text" [(ngModel)]="nuevoNombre" name="nuevoNombre">
+<label>Actualizar Apellido</label>
+<input type="text" [(ngModel)]="nuevoApellidos" name="nuevoApellidos">
+<button (click)="actualizarPerfil()">Actualizar Perfil</button>
+</form>
+<section class="image__cover">
+    <img src="../../../assets/images/miperfil.png" alt="">
+</section>

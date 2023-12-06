@@ -15,6 +15,8 @@ import { RegisterComponent } from './page/register/register.component';
 import { LoginComponent } from './page/login/login.component';
 import { LabsComponent } from './page/labs/labs.component';
 import { HeaderComponent } from './commons/header/header.component';
+import { MiperfilComponent } from './page/miperfil/miperfil.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const config ={
   apiKey: "AIzaSyDTNDTsBJI68ih3zGOWtXF2HpLknSJbpwA",
@@ -34,7 +36,8 @@ const config ={
     RegisterComponent,
     LoginComponent,
     LabsComponent,
-    HeaderComponent
+    HeaderComponent,
+    MiperfilComponent
     
   ],
   imports: [
@@ -44,7 +47,9 @@ const config ={
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

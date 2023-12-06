@@ -57,13 +57,13 @@
     <div class="form-label-input"> 
         <form>
             <label for="name">Nombres</label><br>
-            <input type="text" [(ngModel)]="name" [ngModelOptions]="{ standalone: true}"><br>
+            <input type="text" id="name" [(ngModel)]="name" name="name"><br>
             <label for="abrev">Abrev</label><br>
-            <input type="text" [(ngModel)]="abrev" [ngModelOptions]="{ standalone: true}"><br> 
+            <input type="text" id="abrev" [(ngModel)]="abrev" name="abrev"><br> 
             <label for="creator">Creador</label><br>
-            <input type="text" [(ngModel)]="creator" [ngModelOptions]="{ standalone: true}"><br>
+            <input type="text" id="creator" [(ngModel)]="creator" name="creator"><br>
             <label for="year">Año</label><br>
-            <input type="text" [(ngModel)]="year" [ngModelOptions]="{ standalone: true}"><br>
+            <input type="text" id="year" [(ngModel)]="year" name="year"><br>
 
             <input type="button" value="Enviar" (click)="save()">
             <input type="button" value="Actualizar" (click)="update()">
@@ -89,8 +89,8 @@
                     <td>{{row.creator}}</td>
                     <td>{{row.year}}</td> 
                     <th>
-                        <button (click)="actualizar(row.id)">Editar</button>
-                        <button (click)="borrar(row.id)">Eliminar</button>
+                        <button *ngIf="usuarioAutenticado" (click)="actualizar(row.id)">Editar</button>
+                        <button *ngIf="usuarioAutenticado" (click)="borrar(row.id)">Eliminar</button>
                     </th>
                 </tr>
             </tbody>

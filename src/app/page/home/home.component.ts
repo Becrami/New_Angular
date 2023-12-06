@@ -2,7 +2,8 @@ import { Component, OnInit} from '@angular/core';
 import { Data } from '@angular/router';
 import { LenguajesService } from 'src/app/services/lenguajes.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
-
+import { AuthService } from 'src/app/services/auth.service';
+import { Subject } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,24 +19,36 @@ export class HomeComponent implements OnInit {
   editingMode: boolean = false;
   year: string = "";
   creator: string = "";
- 
+  usuarioAutenticado: boolean = false;
+
+  private refreshTable$ = new Subject<void>();
 
 
-  constructor(private usersServices: UsuariosService, private lenguajesServices: LenguajesService, private language: LenguajesService){}
+  constructor(private usersServices: UsuariosService, private lenguajesServices: LenguajesService, private language: LenguajesService, private authService: AuthService){}
 
   ngOnInit()
   {
+    this.authService.getAuthState().subscribe((user) => {
+      this.usuarioAutenticado = user !== null;
+    });
     this.usersServices.getUsers().subscribe( (data) => {
       this.dataUsers = data;
     })
-    this.language.getListlanguages().subscribe( (data )=> {
-      for (var key in data) 
-      {
-        var row = {id:key, abrev: data[key].abrev, name: data[key].name,  year: data[key].year, creator: data[key].creator }
-        this.dataSource.push(row)
-      }
-      console.log(this.dataSource)
-    })
+        // Escuchar cambios en el Subject y actualizar la tabla
+        this.refreshTable$.subscribe(() => {
+          this.language.getListlanguages().subscribe((data) => {
+            this.dataSource = Object.keys(data).map((key) => ({
+              id: key,
+              abrev: data[key].abrev,
+              name: data[key].name,
+              year: data[key].year,
+              creator: data[key].creator
+            }));
+            console.log(this.dataSource);
+          });
+        });
+         // Cargar datos iniciales
+         this.refreshTable$.next();
   }
 
   save()
@@ -48,6 +61,7 @@ export class HomeComponent implements OnInit {
       creator: this.creator
 
     }
+    
     this.language.postlanguages(body).subscribe( (data) => {
       if(data!=null)
       {
@@ -65,7 +79,7 @@ export class HomeComponent implements OnInit {
         this.year = '';
         this.creator = '';
 
-        window.location.reload(); 
+        this.refreshTable$.next();
       }
     })
   }
@@ -75,7 +89,7 @@ export class HomeComponent implements OnInit {
     this.language.deletelanguages(id).subscribe( (data) => {
       if(data==null)
       {
-        window.location.reload(); 
+        this.refreshTable$.next(); 
       }
     })
   }
@@ -114,7 +128,7 @@ export class HomeComponent implements OnInit {
       .subscribe((data) => {
         if (data != null) {
           this.editingMode = false; // Desactiva el modo de edición
-          window.location.reload();
+          this.refreshTable$.next();
         }
       });
   }

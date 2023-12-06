@@ -5,12 +5,14 @@ import { RegisterComponent } from './page/register/register.component';
 import { LoginComponent } from './page/login/login.component';
 import { LabsComponent } from './page/labs/labs.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { MiperfilComponent } from './page/miperfil/miperfil.component';
 
 const routes: Routes = [
   { path:"", component:HomeComponent },
   { path:"register", component:RegisterComponent },
   { path:"login", component:LoginComponent },
-  { path:"labs", component:LabsComponent, ...canActivate(()=>redirectUnauthorizedTo(["/"]))}
+  { path:"labs", component:LabsComponent, ...canActivate(()=>redirectUnauthorizedTo(["/"]))},
+  { path:"miperfil", component:MiperfilComponent,  ...canActivate(()=>redirectUnauthorizedTo(["/"]))}
 
 ];
 
