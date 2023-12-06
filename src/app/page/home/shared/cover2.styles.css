@@ -1,0 +1,51 @@
+.text__about h1{
+    color: #101E2C;
+    font-weight: 600;
+}
+.text__about p{
+    font-size: 16px;
+    margin-top: 40px;
+    color:  #485663;
+}
+.image__about{
+    width: 100%;
+    display: flex;
+}
+.image__about img{
+    width: 300px;
+}
+footer {
+    background-color: #333;
+    color: #fff; 
+    padding: 20px 0; 
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+p {
+    font-size: 16px; 
+}
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color: blueviolet;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+textarea {
+    width: 100%; 
+    padding: 10px; 
+    font-size: 14px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-bottom: 10px;
+  }
+  
+  textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }

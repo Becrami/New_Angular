@@ -1,0 +1,52 @@
+.text__cover{
+    width: 100%;
+    padding-right: 150px;
+}
+.text__cover h1 {
+    color: #101E2C;
+    font-size: 50px
+}
+.text__cover p{
+    font-size: 16px;
+    margin-top: 40px;
+    color:  #485663;
+}
+.cover1{
+    display: block;
+    width: 150px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+    background: #9A00BF;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.cover1:hover{
+    background: transparent;
+    border: 2px solid #9A00BF;
+    color: #AB29CA;
+}
+.image__cover{
+    width: 100%;
+}
+.image__cover img{
+    width: 550px;
+}
+.container__card-primary{
+    padding-top: 100px;
+}
+.card__primary{
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+    padding: 0px 20px;
+}
+.text__card-primary{
+    max-width: 800px;
+    margin: auto;
+}

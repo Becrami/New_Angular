@@ -1,0 +1,53 @@
+
+  .card:hover, .cuadrado:hover {
+    transform: scale(1.05);
+  }
+
+  .card h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  textarea {
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+  
+  textarea {
+    background-color: #f5f5f5;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+
+  button:hover {
+    background-color: #0056b3;
+  }
+  .container__trut div {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 10px 0; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  .container__trut .cuadrado textarea {
+    width: 100%; 
+    padding: 15px; 
+    font-size: 16px; 
+    border: 2px solid #3498db; 
+    border-radius: 8px;
+    margin-bottom: 15px; 
+  }
